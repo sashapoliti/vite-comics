@@ -14,7 +14,7 @@ body {
   background-color: $general-white;
   color: $header-text;
 }
-ul {
+ul, li {
   list-style: none;
   box-sizing: border-box;
   margin: 0;
