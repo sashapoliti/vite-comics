@@ -11,6 +11,6 @@ $fa-font-path: '../fonts/webfonts';
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@100..700&display=swap');
 
 body {
-    color: $redcolor;
-    font-family: "Anton", sans-serif;
+    background-color: $general-white;
+    color: $header-text;
 }
