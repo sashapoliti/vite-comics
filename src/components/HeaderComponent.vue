@@ -74,7 +74,7 @@ header {
   font-family: $anton;
   font-size: 0.9rem;
   & > div {
-    height: 130px;
+    height: 120px;
     div#logo {
       width: 80px;
       aspect-ratio: 1 / 1;
@@ -87,8 +87,8 @@ header {
           }
         }
         a {
-          height: 130px;
-          margin-right: 35px;
+          height: 120px;
+          margin-right: 40px;
           position: relative;
           &:hover {
             color: $general-blue;
