@@ -42,6 +42,14 @@
     <div id="bottom-footer">
       <div class="container d-flex justify-content-between align-items-center">
         <a id="call-to-action" class="text-uppercase" href="#">Sign-up now!</a>
+        <div class="social-icons d-flex align-items-center">
+          <span class="text-uppercase">follow us</span>
+          <div class="icon" v-for="(item, index) in socialIcons" :key="index">
+            <a href="item.url">
+                <img :src="`/images/${item.img}`" :alt="`Icona di ${item.name}`" />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </footer>
@@ -160,6 +168,33 @@ export default {
           url: "#",
         },
       ],
+      socialIcons: [
+        {
+          name: "Facebook",
+          img: "footer-facebook.png",
+          url: '#'
+        },
+        {
+          name: "Twitter",
+          img: "footer-twitter.png",
+          url: '#'
+        },
+        {
+          name: "Youtube",
+          img: "footer-youtube.png",
+          url: '#'
+        },
+        {
+          name: "Pinterest",
+          img: "footer-pinterest.png",
+          url: '#'
+        },
+        {
+          name: "Periscope",
+          img: "footer-periscope.png",
+          url: '#'
+        },
+      ],
     };
   },
 };
@@ -211,18 +246,37 @@ footer {
   #bottom-footer {
     background-color: $footer-bg;
     div.container {
-        height: 120px;
-        #call-to-action {
-            color: $general-white;
-            padding: 10px 15px;
-            font-size: 1rem;
-            font-weight: 600;
-            border: 2px solid $general-blue;
-            &:hover {
-                background-color: $general-blue;
-                transition-duration: 0.3s;
+      height: 120px;
+      #call-to-action {
+        color: $general-white;
+        padding: 10px 15px;
+        font-size: 1rem;
+        font-weight: 600;
+        border: 2px solid $general-blue;
+        &:hover {
+          background-color: $general-blue;
+          transition-duration: 0.3s;
+        }
+      }
+      div.social-icons {
+        span {
+          font-family: $anton;
+          font-size: 1.4rem;
+          margin-right: 10px;
+          color: $general-blue;
+        }
+        div.icon {
+            margin-left: 20px;
+            a {
+                &:hover {
+                    img {
+                        filter:  brightness(200%);
+                        transition-duration: 0.6s;
+                    }
+                }
             }
         }
+      }
     }
   }
 }
