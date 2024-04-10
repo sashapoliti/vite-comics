@@ -1,8 +1,14 @@
 <template>
   <footer>
     <div id="top-footer">
-      <div class="container d-flex justify-content-between align-items-center">        
-        <FooterShopCards v-for="(item, index) in shopCards" :key="index" :title="item.title" :image="item.img" />
+      <div class="container d-flex justify-content-between align-items-center">
+        <FooterShopCards
+          v-for="(item, index) in shopCards"
+          :key="index"
+          :title="item.title"
+          :image="item.img"
+          :url="item.url"
+        />
       </div>
     </div>
     <div id="middle-footer">
@@ -48,7 +54,10 @@
           <span class="text-uppercase">follow us</span>
           <div class="icon" v-for="(item, index) in socialIcons" :key="index">
             <a href="item.url">
-                <img :src="`/images/${item.img}`" :alt="`Icona di ${item.name}`" />
+              <img
+                :src="`/images/${item.img}`"
+                :alt="`Icona di ${item.name}`"
+              />
             </a>
           </div>
         </div>
@@ -61,8 +70,8 @@
 import FooterShopCards from "./FooterShopCards.vue";
 export default {
   name: "FooterComponent",
-  components : {
-    FooterShopCards
+  components: {
+    FooterShopCards,
   },
   data() {
     return {
@@ -178,51 +187,56 @@ export default {
         {
           name: "Facebook",
           img: "footer-facebook.png",
-          url: '#'
+          url: "#",
         },
         {
           name: "Twitter",
           img: "footer-twitter.png",
-          url: '#'
+          url: "#",
         },
         {
           name: "Youtube",
           img: "footer-youtube.png",
-          url: '#'
+          url: "#",
         },
         {
           name: "Pinterest",
           img: "footer-pinterest.png",
-          url: '#'
+          url: "#",
         },
         {
           name: "Periscope",
           img: "footer-periscope.png",
-          url: '#'
+          url: "#",
         },
       ],
       shopCards: [
         {
-            title : 'Digital Comics',
-            img : 'buy-comics-digital-comics.png'
+          title: "Digital Comics",
+          img: "buy-comics-digital-comics.png",
+          url: "#",
         },
         {
-            title : 'Dc Merchandise',
-            img : 'buy-comics-merchandise.png'
+          title: "Dc Merchandise",
+          img: "buy-comics-merchandise.png",
+          url: "#",
         },
         {
-            title : 'Subscription',
-            img : 'buy-comics-subscriptions.png'
+          title: "Subscription",
+          img: "buy-comics-subscriptions.png",
+          url: "#",
         },
         {
-            title : 'Comic Shop Locator',
-            img : 'buy-comics-shop-locator.png'
+          title: "Comic Shop Locator",
+          img: "buy-comics-shop-locator.png",
+          url: "#",
         },
         {
-            title : 'Dc Power Visa',
-            img : 'buy-dc-power-visa.svg'
-        }
-      ]
+          title: "Dc Power Visa",
+          img: "buy-dc-power-visa.svg",
+          url: "#",
+        },
+      ],
     };
   },
 };
@@ -232,14 +246,14 @@ export default {
 @use "../assets/styles/partials/variables" as *;
 
 footer {
-    #top-footer {
-        background-color: $general-blue;
-        color: $general-white;
-        div.container {
-            padding-top: 30px;
-            padding-bottom: 30px;                        
-        }
+  #top-footer {
+    background-color: $general-blue;
+    color: $general-white;
+    div.container {
+      padding-top: 30px;
+      padding-bottom: 30px;
     }
+  }
   #middle-footer {
     background-image: url("/images/footer-bg.jpg");
     background-size: cover;
@@ -302,15 +316,15 @@ footer {
           color: $general-blue;
         }
         div.icon {
-            margin-left: 20px;
-            a {
-                &:hover {
-                    img {
-                        filter:  brightness(200%);
-                        transition-duration: 0.6s;
-                    }
-                }
+          margin-left: 20px;
+          a {
+            &:hover {
+              img {
+                filter: brightness(200%);
+                transition-duration: 0.6s;
+              }
             }
+          }
         }
       }
     }

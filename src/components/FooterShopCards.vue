@@ -1,10 +1,10 @@
 <template>
-  <a class="d-flex justify-content-center align-items-center" href="#">
+  <a class="d-flex justify-content-center align-items-center" :href="url">
     <div class="icon d-flex justify-content-center align-items-center">
       <img
-        class="img-fluid h-100 "
+        class="img-fluid h-100"
         :src="`/images/${image}`"
-        alt=""
+        :alt="`Immagine link ${title}`"
       />
     </div>
     <span class="text-uppercase">{{ title }}</span>
@@ -14,7 +14,7 @@
 <script>
 export default {
   name: "FooterShopCards",
-  props: ['title', 'image']
+  props: ["title", "image", "url"],
 };
 </script>
 
