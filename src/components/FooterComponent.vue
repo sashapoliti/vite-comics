@@ -1,7 +1,9 @@
 <template>
   <footer>
     <div id="top-footer">
-      <div class="container">top footer</div>
+      <div class="container d-flex justify-content-between align-items-center">        
+        <FooterShopCards v-for="(item, index) in shopCards" :key="index" :title="item.title" :image="item.img" />
+      </div>
     </div>
     <div id="middle-footer">
       <div class="container">
@@ -56,8 +58,12 @@
 </template>
 
 <script>
+import FooterShopCards from "./FooterShopCards.vue";
 export default {
   name: "FooterComponent",
+  components : {
+    FooterShopCards
+  },
   data() {
     return {
       dcComics: [
@@ -195,6 +201,28 @@ export default {
           url: '#'
         },
       ],
+      shopCards: [
+        {
+            title : 'Digital Comics',
+            img : 'buy-comics-digital-comics.png'
+        },
+        {
+            title : 'Dc Merchandise',
+            img : 'buy-comics-merchandise.png'
+        },
+        {
+            title : 'Subscription',
+            img : 'buy-comics-subscriptions.png'
+        },
+        {
+            title : 'Comic Shop Locator',
+            img : 'buy-comics-shop-locator.png'
+        },
+        {
+            title : 'Dc Power Visa',
+            img : 'buy-dc-power-visa.svg'
+        }
+      ]
     };
   },
 };
@@ -204,6 +232,14 @@ export default {
 @use "../assets/styles/partials/variables" as *;
 
 footer {
+    #top-footer {
+        background-color: $general-blue;
+        color: $general-white;
+        div.container {
+            padding-top: 30px;
+            padding-bottom: 30px;                        
+        }
+    }
   #middle-footer {
     background-image: url("/images/footer-bg.jpg");
     background-size: cover;
