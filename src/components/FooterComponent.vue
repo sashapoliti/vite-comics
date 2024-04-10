@@ -40,7 +40,9 @@
       </div>
     </div>
     <div id="bottom-footer">
-      <div class="container">bottom footer</div>
+      <div class="container d-flex justify-content-between align-items-center">
+        <a id="call-to-action" class="text-uppercase" href="#">Sign-up now!</a>
+      </div>
     </div>
   </footer>
 </template>
@@ -199,12 +201,28 @@ footer {
               font-size: 0.8rem;
               &:hover {
                 text-decoration: underline;
-                transition-duration: 0.2s;
               }
             }
           }
         }
       }
+    }
+  }
+  #bottom-footer {
+    background-color: $footer-bg;
+    div.container {
+        height: 120px;
+        #call-to-action {
+            color: $general-white;
+            padding: 10px 15px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: 2px solid $general-blue;
+            &:hover {
+                background-color: $general-blue;
+                transition-duration: 0.3s;
+            }
+        }
     }
   }
 }
