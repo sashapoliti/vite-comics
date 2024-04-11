@@ -31,6 +31,7 @@ main {
       display: inline-block;
       background-color: $general-blue;
       padding: 10px 35px;
+      transform: translateY(-50%);
     }
   }
 }
