@@ -3,13 +3,30 @@
     <div id="jumbotron"></div>
     <div class="container">
       <h2 class="text-uppercase">Current Series</h2>
+      <div class="comics container">
+        <div class="row">
+          <div class="col-2">
+            <MainComicsCard />
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 </template>
 
 <script>
+import {comics} from '../data/storage.js';
+import MainComicsCard from './MainComicsCard.vue';
 export default {
-  name: "MainComponent"
+  name: "MainComponent",
+  components: {
+    MainComicsCard
+  },
+  data() {
+    return {
+      comics
+    }
+  }
 };
 </script>
 
@@ -17,7 +34,6 @@ export default {
 @use "../assets/styles/partials/variables" as *;
 
 main {
-  font-family: $anton;
   background-color: $main-bg;
   color: $general-white;
   div#jumbotron {
@@ -26,12 +42,15 @@ main {
     background-image: url('/images/jumbotron.jpg');
   }
   div.container {
-    height: 120px;
     h2 {
       display: inline-block;
+      font-family: $anton;
       background-color: $general-blue;
       padding: 10px 35px;
       transform: translateY(-50%);
+    }
+    div.comics {
+      margin-top: -10px;
     }
   }
 }
