@@ -1,14 +1,15 @@
 <template>
   <main>
-    <div class="container d-flex align-items-center">
-      <h3>--> Content goes here <--</h3>
+    <div id="jumbotron"></div>
+    <div class="container">
+      <h2 class="text-uppercase">Current Series</h2>
     </div>
   </main>
 </template>
 
 <script>
 export default {
-  name: "MainComponent",
+  name: "MainComponent"
 };
 </script>
 
@@ -19,8 +20,18 @@ main {
   font-family: $anton;
   background-color: $main-bg;
   color: $general-white;
-  & > div {
+  div#jumbotron {
+    width: 100%;
+    height: 400px;
+    background-image: url('/images/jumbotron.jpg');
+  }
+  div.container {
     height: 120px;
+    h2 {
+      display: inline-block;
+      background-color: $general-blue;
+      padding: 10px 35px;
+    }
   }
 }
 </style>
