@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div id="top-footer">
-      <div class="container d-flex justify-content-between align-items-center">
+      <div class="container d-flex flex-wrap justify-content-center align-items-center">
         <FooterShopCards
           v-for="(item, index) in shopCards"
           :key="index"
