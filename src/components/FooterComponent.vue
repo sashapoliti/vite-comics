@@ -67,6 +67,7 @@
 </template>
 
 <script>
+import {dcComics, shop, dc, sites, socialIcons, shopCards} from '../data/storage.js';
 import FooterShopCards from "./FooterShopCards.vue";
 export default {
   name: "FooterComponent",
@@ -75,168 +76,12 @@ export default {
   },
   data() {
     return {
-      dcComics: [
-        {
-          name: "Characters",
-          url: "#",
-        },
-        {
-          name: "Comics",
-          url: "#",
-        },
-        {
-          name: "Movies",
-          url: "#",
-        },
-        {
-          name: "TV",
-          url: "#",
-        },
-        {
-          name: "Games",
-          url: "#",
-        },
-        {
-          name: "Videos",
-          url: "#",
-        },
-        {
-          name: "News",
-          url: "#",
-        },
-      ],
-      shop: [
-        {
-          name: "Shop DC",
-          url: "#",
-        },
-        {
-          name: "Shop DC Collectibles",
-          url: "#",
-        },
-      ],
-      dc: [
-        {
-          name: "Term Of Use",
-          url: "#",
-        },
-        {
-          name: "Privacy policy (New)",
-          url: "#",
-        },
-        {
-          name: "Ad Choices",
-          url: "#",
-        },
-        {
-          name: "Advertising",
-          url: "#",
-        },
-        {
-          name: "Jobs",
-          url: "#",
-        },
-        {
-          name: "Subscriptions",
-          url: "#",
-        },
-        {
-          name: "Talent Workshops",
-          url: "#",
-        },
-        {
-          name: "CPSC Certificates",
-          url: "#",
-        },
-        {
-          name: "Ratings",
-          url: "#",
-        },
-        {
-          name: "Shop Help",
-          url: "#",
-        },
-        {
-          name: "Contact Us",
-          url: "#",
-        },
-      ],
-      sites: [
-        {
-          name: "DC",
-          url: "#",
-        },
-        {
-          name: "MAD Magazine",
-          url: "#",
-        },
-        {
-          name: "DC Kids",
-          url: "#",
-        },
-        {
-          name: "DC Universe",
-          url: "#",
-        },
-        {
-          name: "DC Power Visa",
-          url: "#",
-        },
-      ],
-      socialIcons: [
-        {
-          name: "Facebook",
-          img: "footer-facebook.png",
-          url: "#",
-        },
-        {
-          name: "Twitter",
-          img: "footer-twitter.png",
-          url: "#",
-        },
-        {
-          name: "Youtube",
-          img: "footer-youtube.png",
-          url: "#",
-        },
-        {
-          name: "Pinterest",
-          img: "footer-pinterest.png",
-          url: "#",
-        },
-        {
-          name: "Periscope",
-          img: "footer-periscope.png",
-          url: "#",
-        },
-      ],
-      shopCards: [
-        {
-          title: "Digital Comics",
-          img: "buy-comics-digital-comics.png",
-          url: "#",
-        },
-        {
-          title: "Dc Merchandise",
-          img: "buy-comics-merchandise.png",
-          url: "#",
-        },
-        {
-          title: "Subscription",
-          img: "buy-comics-subscriptions.png",
-          url: "#",
-        },
-        {
-          title: "Comic Shop Locator",
-          img: "buy-comics-shop-locator.png",
-          url: "#",
-        },
-        {
-          title: "Dc Power Visa",
-          img: "buy-dc-power-visa.svg",
-          url: "#",
-        },
-      ],
+      dcComics,
+      shop,
+      dc,
+      sites,
+      socialIcons,
+      shopCards,
     };
   },
 };
